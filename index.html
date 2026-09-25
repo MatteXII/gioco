@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#15324b" />
+  <title>Banana Bazaar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="Banana Bazaar"></canvas>
+    <section id="hud" aria-live="polite">
+      <div class="brand">🍌 Banana Bazaar</div>
+      <div class="stats">
+        <span>💰 <b id="money">0</b></span>
+        <span>💵 <b id="pending">0</b></span>
+        <span>🎒 <b id="inventory">0/0</b></span>
+      </div>
+      <div class="hint">WASD / frecce per muoverti · le azioni avvengono automaticamente</div>
+    </section>
+    <section id="actions">
+      <button id="unlock-corn">Sblocca mais · 100</button>
+      <button id="hire-stacker">Assumi rifornitore · 250</button>
+      <button id="upgrade">Potenzia velocità · <span id="upgrade-cost">150</span></button>
+      <button id="reset" class="danger">Nuova partita</button>
+    </section>
+    <div id="joystick" aria-label="Joystick virtuale"><div id="stick"></div></div>
+    <div id="toast" role="status"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
